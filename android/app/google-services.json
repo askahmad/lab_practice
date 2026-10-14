@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "664633188895",
+    "firebase_url": "https://lab-practice-f2836-default-rtdb.firebaseio.com",
+    "project_id": "lab-practice-f2836",
+    "storage_bucket": "lab-practice-f2836.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:664633188895:android:0c784f41d7fd76f79dab2a",
+        "android_client_info": {
+          "package_name": "com.example.practice_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "664633188895-i8n0ga9d09qr8v6n1bveu7c0630hvu3u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.practice_app",
+            "certificate_hash": "55b4bd4e3bd2050e639774bc6f7358d322093a43"
+          }
+        },
+        {
+          "client_id": "664633188895-1hs72gtb1foshi3l3adauru8mbecofou.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALz_sNMHZr0i3F5RKusyI1-0HT9UugLz0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "664633188895-1hs72gtb1foshi3l3adauru8mbecofou.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
