@@ -8,13 +8,15 @@ import '../../../app/constants/app_strings.dart';
 import '../../../app/routes/app_routes.dart';
 import '../../../shared/widgets/custom_button.dart';
 import '../../../shared/widgets/custom_text_field.dart';
-import '../controllers/auth_controller.dart';
+import '../controllers/login_controller.dart';
 
-class LoginView extends GetView<AuthController> {
+class LoginView extends StatelessWidget {
   const LoginView({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(LoginController());
+
     return Scaffold(
       backgroundColor: AppColors.background,
       body: SafeArea(
@@ -78,7 +80,7 @@ class LoginView extends GetView<AuthController> {
 
                     // Email Field
                     CustomTextField(
-                      controller: controller.loginEmailController,
+                      controller: controller.emailController,
                       labelText: AppStrings.email,
                       hintText: 'name@example.com',
                       prefixIcon: AppIcons.email,
@@ -91,7 +93,7 @@ class LoginView extends GetView<AuthController> {
                     // Password Field
                     Obx(
                       () => CustomTextField(
-                        controller: controller.loginPasswordController,
+                        controller: controller.passwordController,
                         labelText: AppStrings.password,
                         hintText: 'Enter your password',
                         prefixIcon: AppIcons.password,

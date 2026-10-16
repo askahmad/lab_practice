@@ -5,7 +5,7 @@ import 'app/bindings/app_binding.dart';
 import 'app/constants/app_colors.dart';
 import 'app/constants/app_strings.dart';
 import 'app/routes/app_pages.dart';
-import 'firebase_options.dart';
+import 'data/services/firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

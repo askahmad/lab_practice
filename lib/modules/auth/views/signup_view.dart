@@ -6,13 +6,15 @@ import '../../../app/constants/app_strings.dart';
 import '../../../app/routes/app_routes.dart';
 import '../../../shared/widgets/custom_button.dart';
 import '../../../shared/widgets/custom_text_field.dart';
-import '../controllers/auth_controller.dart';
+import '../controllers/signup_controller.dart';
 
-class SignupView extends GetView<AuthController> {
+class SignupView extends StatelessWidget {
   const SignupView({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(SignupController());
+
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
@@ -57,7 +59,7 @@ class SignupView extends GetView<AuthController> {
 
                     // Full Name Field
                     CustomTextField(
-                      controller: controller.signupNameController,
+                      controller: controller.nameController,
                       labelText: AppStrings.fullName,
                       hintText: 'John Doe',
                       prefixIcon: AppIcons.person,
@@ -69,7 +71,7 @@ class SignupView extends GetView<AuthController> {
 
                     // Email Field
                     CustomTextField(
-                      controller: controller.signupEmailController,
+                      controller: controller.emailController,
                       labelText: AppStrings.email,
                       hintText: 'name@example.com',
                       prefixIcon: AppIcons.email,
@@ -82,7 +84,7 @@ class SignupView extends GetView<AuthController> {
                     // Password Field
                     Obx(
                       () => CustomTextField(
-                        controller: controller.signupPasswordController,
+                        controller: controller.passwordController,
                         labelText: AppStrings.password,
                         hintText: 'Create a password (min 6 chars)',
                         prefixIcon: AppIcons.password,
@@ -106,7 +108,7 @@ class SignupView extends GetView<AuthController> {
                     // Confirm Password Field
                     Obx(
                       () => CustomTextField(
-                        controller: controller.signupConfirmPasswordController,
+                        controller: controller.confirmPasswordController,
                         labelText: AppStrings.confirmPassword,
                         hintText: 'Re-enter your password',
                         prefixIcon: AppIcons.password,
